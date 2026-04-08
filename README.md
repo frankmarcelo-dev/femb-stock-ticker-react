@@ -32,52 +32,47 @@ npm run dev        # Start dev server at http://localhost:3000
 
 ## Project Structure
 
-```text
-src/
-├── App.tsx                    # Root router (/ → /login)
-├── pages/                     # Login, Dashboard
-├── components/                # App components: MarketTicker, Sidebar, StockTickerCard
-├── design-system/
-│   ├── components/            # Button, Input, Badge, Card
-│   ├── tokens/                # TypeScript design tokens
-│   └── styles/                # CSS custom properties, reset, globals
-├── data/mockStocks.ts         # Mock stock data and price history generator
-└── types/stock.ts             # TypeScript interfaces and formatting utilities
 ```
+src/
+├── App.tsx                    # Root router (/ → /login); stub routes for watchlist, portfolio, etc.
+├── main.tsx
+├── pages/
+│   ├── Login/                 # Split-panel login with Auth0 SSO placeholder + email form
+│   └── Dashboard/             # Portfolio stats, performance chart, holdings list, watchlist
+├── components/
+│   ├── MarketTicker/          # Top header: live clock, scrolling market indices strip
+│   ├── Sidebar/               # Nav with active states, user area, logout
+│   └── StockTickerCard/       # Sparkline chart, OHLV stats, direction theming + stories
+├── design-system/
+│   ├── components/
+│   │   ├── Button/            # 5 variants, 5 sizes, loading state, icon support + stories
+│   │   ├── Input/             # Label, hint, error, icons, mono mode + stories
+│   │   ├── Card/              # Elevated, interactive, accent variants + stories
+│   │   └── Badge/             # Market up/down/flat/info/neutral/amber variants + stories
+│   ├── tokens/                # TypeScript token definitions: colors, typography, spacing, shadows, animation
+│   └── styles/                # tokens.css (CSS custom properties), reset.css, global.css
+├── data/mockStocks.ts         # Mock stock + portfolio data, generatePriceHistory() utility
+└── types/stock.ts             # TypeScript interfaces + formatCurrency/formatPercent/formatVolume utils
+```
+
+**Path aliases:** `@` → `src/`, `@ds` → `src/design-system/`
 
 ## Design System
 
-Design tokens are defined in `src/design-system/tokens/` and exposed as CSS custom properties via `src/design-system/styles/tokens.css`. All components use these variables — never hardcode colors or spacing.
+Design tokens are defined in `src/design-system/tokens/` as TypeScript and mirrored as CSS custom properties in `src/design-system/styles/tokens.css`. Always use CSS variables in stylesheets — never hardcode colors or spacing.
 
-Path aliases: `@` → `src/`, `@ds` → `src/design-system/`
+Key color semantics:
+- `--color-interactive-primary` (cyan) — brand/interactive elements
+- `--color-market-up` (green) — positive price movement
+- `--color-market-down` (red) — negative price movement
 
-## Folder Structure 
-```
-frontend/
-├── .storybook/
-│   ├── main.ts           — Storybook config with path aliases
-│   └── preview.tsx       — Dark theme + design token imports
-├── src/
-│   ├── design-system/
-│   │   ├── tokens/       — colors, typography, spacing, shadows, animation (TS)
-│   │   ├── styles/       — tokens.css, reset.css, global.css
-│   │   └── components/
-│   │       ├── Button/   — 5 variants, 5 sizes, loading, icons + stories
-│   │       ├── Input/    — label, hint, error, icons, mono mode + stories
-│   │       ├── Card/     — elevated, interactive, accent variants + stories
-│   │       └── Badge/    — market up/down/flat/info/neutral/amber + stories
-│   ├── components/
-│   │   ├── StockTickerCard/  — sparkline, OHLV stats, direction theming + stories
-│   │   ├── Sidebar/          — nav with active states, user area, logout
-│   │   └── MarketTicker/     — live clock, market indices strip, header
-│   ├── pages/
-│   │   ├── Login/        — split-panel login with Auth0 SSO + email form
-│   │   └── Dashboard/    — portfolio stats, performance chart, holdings, watchlist
-│   ├── data/mockStocks.ts
-│   └── types/stock.ts
-├── package.json
-└── vite.config.ts
-```
+Key layout variables: `--sidebar-width: 220px`, `--header-height: 56px`
+
+Staggered entry animations: use `animate-in` and `animate-in-delay-{1..N}` CSS classes (defined in `global.css`).
+
+## Storybook
+
+All design system components and `StockTickerCard` have `.stories.tsx` files. The Storybook preview uses the app's own CSS tokens with a dark theme by default. Background presets: dark (default), surface, light.
 
 ## Backend
 
@@ -85,7 +80,7 @@ The Vite dev server proxies `/api` requests to `http://localhost:7236`. The back
 
 ## Authentication
 
-The login page has placeholder Auth0 integration points. Currently uses a simulated login flow that redirects to the dashboard.
+The login page has placeholder Auth0 integration points. Currently uses a simulated login flow that redirects to the dashboard. Integration points are marked with comments like `// Replace with: await auth0Client.loginWithRedirect()`.
 
 ## AI Development
 

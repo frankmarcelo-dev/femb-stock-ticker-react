@@ -58,6 +58,10 @@ Color semantics: cyan (`--color-interactive-primary`) for brand/interactive, gre
 
 All design system components have `.stories.tsx` files. The preview uses a dark theme with the app's own CSS tokens loaded. Background presets: dark (default), surface, light.
 
+### Routes
+
+`App.tsx` defines routes for `/watchlist`, `/portfolio`, `/markets`, `/alerts`, and `/settings`, but all are placeholder stubs that render `DashboardPage`. Only `/login` and `/dashboard` are real pages.
+
 ### Authentication
 
 `LoginPage` has placeholder Auth0 integration — simulated login that navigates to `/dashboard`. Real integration points are marked with comments like `// Replace with: await auth0Client.loginWithRedirect()`.
