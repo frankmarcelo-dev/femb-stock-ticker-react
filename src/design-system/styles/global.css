@@ -1,0 +1,97 @@
+/* ─── Utility classes ─── */
+.font-display  { font-family: var(--font-display); }
+.font-body     { font-family: var(--font-body); }
+.font-mono     { font-family: var(--font-mono); }
+
+.text-primary   { color: var(--color-text-primary); }
+.text-secondary { color: var(--color-text-secondary); }
+.text-accent    { color: var(--color-text-accent); }
+
+.text-up   { color: var(--color-market-up); }
+.text-down { color: var(--color-market-down); }
+.text-flat { color: var(--color-market-flat); }
+
+/* Scanline overlay for terminal feel */
+.scanlines::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 0, 0, 0.03) 2px,
+    rgba(0, 0, 0, 0.03) 4px
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Grid pattern background */
+.grid-bg {
+  background-image:
+    linear-gradient(rgba(0, 212, 245, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 212, 245, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* Glow border on focus */
+.glow-border {
+  border: 1px solid var(--color-border-default);
+  transition: border-color var(--duration-base) var(--ease-out),
+              box-shadow var(--duration-base) var(--ease-out);
+}
+.glow-border:focus-within {
+  border-color: var(--color-border-focus);
+  box-shadow: var(--shadow-glow-sm);
+}
+
+/* Animated counter text */
+.counter-text {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum";
+}
+
+/* Status indicator dot */
+.status-dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: var(--radius-full);
+  background: currentColor;
+  flex-shrink: 0;
+}
+.status-dot.pulse {
+  animation: statusPulse 2s ease-in-out infinite;
+}
+@keyframes statusPulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.5; transform: scale(0.8); }
+}
+
+/* Fade-in stagger animation */
+@keyframes fadeSlideUp {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.animate-in {
+  animation: fadeSlideUp var(--duration-slower) var(--ease-out) both;
+}
+.animate-in-delay-1 { animation-delay: 50ms; }
+.animate-in-delay-2 { animation-delay: 100ms; }
+.animate-in-delay-3 { animation-delay: 150ms; }
+.animate-in-delay-4 { animation-delay: 200ms; }
+.animate-in-delay-5 { animation-delay: 250ms; }
+.animate-in-delay-6 { animation-delay: 300ms; }
+
+/* Number flash on change */
+@keyframes flashGreen {
+  0%   { color: var(--color-market-up); }
+  100% { color: inherit; }
+}
+@keyframes flashRed {
+  0%   { color: var(--color-market-down); }
+  100% { color: inherit; }
+}
+.flash-green { animation: flashGreen 600ms var(--ease-out) forwards; }
+.flash-red   { animation: flashRed 600ms var(--ease-out) forwards; }
