@@ -1,0 +1,53 @@
+
+> femb-stock-ticker-frontend@0.1.0 build-storybook
+> storybook build --output-dir=/var/folders/mk/tq84p25x561fld4_7xvsw_580000gn/T/chromatic--71422-9L1IzV2fnhzB
+
+[1m@storybook/core v8.6.18
+[22m
+info => Cleaning outputDir: [36m../../../../var/folders/mk/tq84p25x561fld4_7xvsw_580000gn/T/chromatic--71422-9L1IzV2fnhzB[39m
+info => Loading presets
+info => Building manager..
+info => Manager built ([38;2;181;126;229m79 ms[39m)
+info => Building preview..
+[36mvite v5.4.21 [32mbuilding for production...[36m[39m
+transforming...
+[32m✓[39m 2438 modules transformed.
+rendering chunks...
+[2m../../../../var/folders/mk/tq84p25x561fld4_7xvsw_580000gn/T/chromatic--71422-9L1IzV2fnhzB/[22m[32miframe.html                                 [39m[1m[2m 17.58 kB[22m[1m[22m
+[2m../../../../var/folders/mk/tq84p25x561fld4_7xvsw_580000gn/T/chromatic--71422-9L1IzV2fnhzB/[22m[2massets/[22m[35mBadge-DlsOXORi.css                   [39m[1m[2m  1.25 kB[22m[1m[22m
+[2m../../../../var/folders/mk/tq84p25x561fld4_7xvsw_580000gn/T/chromatic--71422-9L1IzV2fnhzB/[22m[2massets/[22m[35mCard-D04xGR04.css                    [39m[1m[2m  1.67 kB[22m[1m[22m
+[2m../../../../var/folders/mk/tq84p25x561fld4_7xvsw_580000gn/T/chromatic--71422-9L1IzV2fnhzB/[22m[2massets/[22m[35mInput-P8-mKZVU.css                   [39m[1m[2m  2.09 kB[22m[1m[22m
+[2m../../../../var/folders/mk/tq84p25x561fld4_7xvsw_580000gn/T/chromatic--71422-9L1IzV2fnhzB/[22m[2massets/[22m[35mStockTickerCard-mdinuDMv.css         [39m[1m[2m  2.94 kB[22m[1m[22m
+[2m../../../../var/folders/mk/tq84p25x561fld4_7xvsw_580000gn/T/chromatic--71422-9L1IzV2fnhzB/[22m[2massets/[22m[35mButton-C5pu9RQ5.css                  [39m[1m[2m  3.21 kB[22m[1m[22m
+[2m../../../../var/folders/mk/tq84p25x561fld4_7xvsw_580000gn/T/chromatic--71422-9L1IzV2fnhzB/[22m[2massets/[22m[35mpreview-D9M0IL42.css                 [39m[1m[2m  5.61 kB[22m[1m[22m
+[2m../../../../var/folders/mk/tq84p25x561fld4_7xvsw_580000gn/T/chromatic--71422-9L1IzV2fnhzB/[22m[2massets/[22m[36mtiny-invariant-CopsF_GD.js           [39m[1m[2m  0.08 kB[22m[1m[22m
+[2m../../../../var/folders/mk/tq84p25x561fld4_7xvsw_580000gn/T/chromatic--71422-9L1IzV2fnhzB/[22m[2massets/[22m[36mpreview-TqM3Oi8H.js                  [39m[1m[2m  0.17 kB[22m[1m[22m
+[2m../../../../var/folders/mk/tq84p25x561fld4_7xvsw_580000gn/T/chromatic--71422-9L1IzV2fnhzB/[22m[2massets/[22m[36mBadge-CsnQRApv.js                    [39m[1m[2m  0.56 kB[22m[1m[22m
+[2m../../../../var/folders/mk/tq84p25x561fld4_7xvsw_580000gn/T/chromatic--71422-9L1IzV2fnhzB/[22m[2massets/[22m[36mpreview-BQfGTwlc.js                  [39m[1m[2m  0.66 kB[22m[1m[22m
+[2m../../../../var/folders/mk/tq84p25x561fld4_7xvsw_580000gn/T/chromatic--71422-9L1IzV2fnhzB/[22m[2massets/[22m[36mpreview-caVMbCIR.js                  [39m[1m[2m  0.69 kB[22m[1m[22m
+[2m../../../../var/folders/mk/tq84p25x561fld4_7xvsw_580000gn/T/chromatic--71422-9L1IzV2fnhzB/[22m[2massets/[22m[36mCard-7FHKdG_K.js                     [39m[1m[2m  0.73 kB[22m[1m[22m
+[2m../../../../var/folders/mk/tq84p25x561fld4_7xvsw_580000gn/T/chromatic--71422-9L1IzV2fnhzB/[22m[2massets/[22m[36mindex-DrFu-skq.js                    [39m[1m[2m  0.77 kB[22m[1m[22m
+[2m../../../../var/folders/mk/tq84p25x561fld4_7xvsw_580000gn/T/chromatic--71422-9L1IzV2fnhzB/[22m[2massets/[22m[36mreact-18-CfAJH9Hp.js                 [39m[1m[2m  0.80 kB[22m[1m[22m
+[2m../../../../var/folders/mk/tq84p25x561fld4_7xvsw_580000gn/T/chromatic--71422-9L1IzV2fnhzB/[22m[2massets/[22m[36mButton-BFw8Dv8z.js                   [39m[1m[2m  1.09 kB[22m[1m[22m
+[2m../../../../var/folders/mk/tq84p25x561fld4_7xvsw_580000gn/T/chromatic--71422-9L1IzV2fnhzB/[22m[2massets/[22m[36mInput-1AzF5Mlk.js                    [39m[1m[2m  1.21 kB[22m[1m[22m
+[2m../../../../var/folders/mk/tq84p25x561fld4_7xvsw_580000gn/T/chromatic--71422-9L1IzV2fnhzB/[22m[2massets/[22m[36mclsx-D4f79wjh.js                     [39m[1m[2m  1.28 kB[22m[1m[22m
+[2m../../../../var/folders/mk/tq84p25x561fld4_7xvsw_580000gn/T/chromatic--71422-9L1IzV2fnhzB/[22m[2massets/[22m[36mtrending-up-BMtFVa6j.js              [39m[1m[2m  1.88 kB[22m[1m[22m
+[2m../../../../var/folders/mk/tq84p25x561fld4_7xvsw_580000gn/T/chromatic--71422-9L1IzV2fnhzB/[22m[2massets/[22m[36mCard.stories-DYJxLySW.js             [39m[1m[2m  2.79 kB[22m[1m[22m
+[2m../../../../var/folders/mk/tq84p25x561fld4_7xvsw_580000gn/T/chromatic--71422-9L1IzV2fnhzB/[22m[2massets/[22m[36mpreview-WIE65ICp.js                  [39m[1m[2m  3.40 kB[22m[1m[22m
+[2m../../../../var/folders/mk/tq84p25x561fld4_7xvsw_580000gn/T/chromatic--71422-9L1IzV2fnhzB/[22m[2massets/[22m[36mBadge.stories-ZmKCANo5.js            [39m[1m[2m  3.61 kB[22m[1m[22m
+[2m../../../../var/folders/mk/tq84p25x561fld4_7xvsw_580000gn/T/chromatic--71422-9L1IzV2fnhzB/[22m[2massets/[22m[36mInput.stories-nZMoHtDM.js            [39m[1m[2m  3.87 kB[22m[1m[22m
+[2m../../../../var/folders/mk/tq84p25x561fld4_7xvsw_580000gn/T/chromatic--71422-9L1IzV2fnhzB/[22m[2massets/[22m[36mpreview-DGZ5Qq08.js                  [39m[1m[2m  4.87 kB[22m[1m[22m
+[2m../../../../var/folders/mk/tq84p25x561fld4_7xvsw_580000gn/T/chromatic--71422-9L1IzV2fnhzB/[22m[2massets/[22m[36mButton.stories-DygrBSxi.js           [39m[1m[2m  6.21 kB[22m[1m[22m
+[2m../../../../var/folders/mk/tq84p25x561fld4_7xvsw_580000gn/T/chromatic--71422-9L1IzV2fnhzB/[22m[2massets/[22m[36mindex-DRjF_FHU.js                    [39m[1m[2m  7.35 kB[22m[1m[22m
+[2m../../../../var/folders/mk/tq84p25x561fld4_7xvsw_580000gn/T/chromatic--71422-9L1IzV2fnhzB/[22m[2massets/[22m[36mpreview-BWzBA1C2.js                  [39m[1m[2m  7.62 kB[22m[1m[22m
+[2m../../../../var/folders/mk/tq84p25x561fld4_7xvsw_580000gn/T/chromatic--71422-9L1IzV2fnhzB/[22m[2massets/[22m[36mpreview-CTOeX_lO.js                  [39m[1m[2m  8.06 kB[22m[1m[22m
+[2m../../../../var/folders/mk/tq84p25x561fld4_7xvsw_580000gn/T/chromatic--71422-9L1IzV2fnhzB/[22m[2massets/[22m[36mtest-utils-C0w85Zn8.js               [39m[1m[2m 12.94 kB[22m[1m[22m
+[2m../../../../var/folders/mk/tq84p25x561fld4_7xvsw_580000gn/T/chromatic--71422-9L1IzV2fnhzB/[22m[2massets/[22m[36mentry-preview-CuXZla8i.js            [39m[1m[2m 30.13 kB[22m[1m[22m
+[2m../../../../var/folders/mk/tq84p25x561fld4_7xvsw_580000gn/T/chromatic--71422-9L1IzV2fnhzB/[22m[2massets/[22m[36mindex-BGxD4Cvp.js                    [39m[1m[2m133.91 kB[22m[1m[22m
+[2m../../../../var/folders/mk/tq84p25x561fld4_7xvsw_580000gn/T/chromatic--71422-9L1IzV2fnhzB/[22m[2massets/[22m[36miframe-eCjPGACd.js                   [39m[1m[2m205.21 kB[22m[1m[22m
+[2m../../../../var/folders/mk/tq84p25x561fld4_7xvsw_580000gn/T/chromatic--71422-9L1IzV2fnhzB/[22m[2massets/[22m[36mStockTickerCard.stories-D2BFomZR.js  [39m[1m[2m383.15 kB[22m[1m[22m
+[2m../../../../var/folders/mk/tq84p25x561fld4_7xvsw_580000gn/T/chromatic--71422-9L1IzV2fnhzB/[22m[2massets/[22m[36mpreview-CdWa80xl.js                  [39m[1m[33m658.05 kB[39m[22m
+[2m../../../../var/folders/mk/tq84p25x561fld4_7xvsw_580000gn/T/chromatic--71422-9L1IzV2fnhzB/[22m[2massets/[22m[36mindex-uyq6bJeC.js                    [39m[1m[33m659.81 kB[39m[22m
+[32m✓ built in 4.27s[39m
+info => Preview built ([38;2;181;126;229m4.46 s[39m)
+info => Output directory: /var/folders/mk/tq84p25x561fld4_7xvsw_580000gn/T/chromatic--71422-9L1IzV2fnhzB

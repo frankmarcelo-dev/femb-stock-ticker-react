@@ -1,0 +1,305 @@
+.page {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: var(--color-bg-base);
+  overflow: hidden;
+}
+
+/* ─── Left: Visual panel ─── */
+.visual {
+  position: relative;
+  background: var(--color-bg-surface);
+  border-right: 1px solid var(--color-border-subtle);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: var(--space-16);
+  overflow: hidden;
+}
+
+/* Grid background */
+.visual::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(0, 212, 245, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 212, 245, 0.04) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+/* Glow orb */
+.visual::after {
+  content: '';
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(0, 212, 245, 0.08) 0%,
+    rgba(0, 212, 245, 0.03) 40%,
+    transparent 70%
+  );
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.visualContent {
+  position: relative;
+  z-index: 1;
+}
+
+.logoArea {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-12);
+}
+
+.logoMark {
+  width: 40px;
+  height: 40px;
+  background: var(--color-interactive-primary);
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  color: var(--color-text-inverse);
+  letter-spacing: -0.05em;
+  box-shadow: var(--shadow-glow-cyan);
+}
+
+.logoText {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: 800;
+  color: var(--color-text-primary);
+  letter-spacing: -0.03em;
+}
+
+.tagline {
+  font-family: var(--font-display);
+  font-size: var(--text-4xl);
+  font-weight: 800;
+  color: var(--color-text-primary);
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+  margin-bottom: var(--space-6);
+}
+
+.taglineAccent {
+  color: var(--color-text-accent);
+  display: block;
+}
+
+.description {
+  font-size: var(--text-md);
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  max-width: 380px;
+  margin-bottom: var(--space-10);
+}
+
+/* ─── Feature list ─── */
+.features {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+}
+
+.featureDot {
+  width: 6px;
+  height: 6px;
+  border-radius: var(--radius-full);
+  background: var(--color-interactive-primary);
+  box-shadow: 0 0 8px var(--color-interactive-primary);
+  flex-shrink: 0;
+}
+
+/* ─── Ticker strip (decorative) ─── */
+.tickerStrip {
+  margin-top: var(--space-10);
+  display: flex;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+.tickerPill {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-3);
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-md);
+}
+
+.tickerSymbol {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  color: var(--color-text-primary);
+  letter-spacing: 0.04em;
+}
+
+.tickerPrice {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--color-text-secondary);
+  font-variant-numeric: tabular-nums;
+}
+
+.tickerUp   { color: var(--color-market-up); }
+.tickerDown { color: var(--color-market-down); }
+
+/* ─── Right: Form panel ─── */
+.formPanel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-16);
+}
+
+.formCard {
+  width: 100%;
+  max-width: 380px;
+}
+
+.formHeader {
+  margin-bottom: var(--space-8);
+}
+
+.formTitle {
+  font-family: var(--font-display);
+  font-size: var(--text-3xl);
+  font-weight: 800;
+  color: var(--color-text-primary);
+  letter-spacing: -0.04em;
+  margin-bottom: var(--space-2);
+  line-height: 1.1;
+}
+
+.formSubtitle {
+  font-size: var(--text-base);
+  color: var(--color-text-secondary);
+}
+
+/* ─── Form ─── */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.dividerRow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin: var(--space-2) 0;
+}
+
+.dividerLine {
+  flex: 1;
+  height: 1px;
+  background: var(--color-border-subtle);
+}
+
+.dividerText {
+  font-size: var(--text-xs);
+  color: var(--color-text-tertiary);
+  font-family: var(--font-mono);
+  white-space: nowrap;
+}
+
+/* Auth0 button */
+.auth0Button {
+  width: 100%;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-md);
+  color: var(--color-text-primary);
+  font-size: var(--text-base);
+  font-weight: 500;
+  cursor: pointer;
+  transition:
+    background var(--duration-base) var(--ease-out),
+    border-color var(--duration-base) var(--ease-out);
+}
+
+.auth0Button:hover {
+  background: var(--color-bg-overlay);
+  border-color: var(--color-border-strong);
+}
+
+.auth0Icon {
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(135deg, #eb5424 0%, #d43f1c 100%);
+  border-radius: var(--radius-base);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 800;
+  color: white;
+  font-family: var(--font-mono);
+  flex-shrink: 0;
+}
+
+.terms {
+  font-size: var(--text-xs);
+  color: var(--color-text-tertiary);
+  text-align: center;
+  line-height: 1.5;
+  margin-top: var(--space-2);
+}
+
+.link {
+  color: var(--color-text-accent);
+  cursor: pointer;
+}
+.link:hover {
+  text-decoration: underline;
+}
+
+/* Error state */
+.errorMsg {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-4);
+  background: rgba(240, 61, 38, 0.08);
+  border: 1px solid rgba(240, 61, 38, 0.2);
+  border-radius: var(--radius-md);
+  font-size: var(--text-sm);
+  color: var(--color-market-down);
+}
+
+@media (max-width: 900px) {
+  .page {
+    grid-template-columns: 1fr;
+  }
+  .visual {
+    display: none;
+  }
+}

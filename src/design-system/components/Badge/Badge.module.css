@@ -1,0 +1,76 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  font-family: var(--font-mono);
+  font-weight: 500;
+  border-radius: var(--radius-base);
+  border: 1px solid transparent;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* ─── Sizes ─── */
+.sm {
+  height: 18px;
+  padding: 0 var(--space-1);
+  font-size: var(--text-2xs);
+  letter-spacing: 0.04em;
+}
+.md {
+  height: 22px;
+  padding: 0 var(--space-2);
+  font-size: var(--text-xs);
+  letter-spacing: 0.03em;
+}
+.lg {
+  height: 26px;
+  padding: 0 var(--space-3);
+  font-size: var(--text-sm);
+}
+
+/* ─── Variants ─── */
+.up {
+  background: var(--color-market-up-subtle);
+  color: var(--color-market-up);
+  border-color: rgba(0, 200, 116, 0.2);
+}
+
+.down {
+  background: var(--color-market-down-subtle);
+  color: var(--color-market-down);
+  border-color: rgba(240, 61, 38, 0.2);
+}
+
+.flat {
+  background: var(--color-market-flat-subtle);
+  color: var(--color-market-flat);
+  border-color: rgba(96, 114, 144, 0.2);
+}
+
+.info {
+  background: var(--color-interactive-primary-subtle);
+  color: var(--color-text-accent);
+  border-color: rgba(0, 212, 245, 0.2);
+}
+
+.neutral {
+  background: var(--color-bg-elevated);
+  color: var(--color-text-secondary);
+  border-color: var(--color-border-default);
+}
+
+.amber {
+  background: rgba(255, 195, 0, 0.1);
+  color: #ffc300;
+  border-color: rgba(255, 195, 0, 0.2);
+}
+
+/* ─── Dot indicator ─── */
+.dot {
+  width: 5px;
+  height: 5px;
+  border-radius: var(--radius-full);
+  background: currentColor;
+  flex-shrink: 0;
+}
